@@ -14,7 +14,7 @@ source ~/.profile
 nvm install 8.2.1
 nvm use 8.2.1
 ```
-### 4
+### 4 Clone Node-WebDollar
 ```shell
 git clone https://github.com/thelazyprogrammer/Node-WebDollar.git
 git checkout api_blocks
