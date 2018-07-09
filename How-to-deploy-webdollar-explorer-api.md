@@ -14,23 +14,13 @@ source ~/.profile
 nvm install 8.2.1
 nvm use 8.2.1
 ```
-### 4. Install CouchDB:
+### 4
 ```shell
-curl -L https://couchdb.apache.org/repo/bintray-pubkey.asc | sudo apt-key add -
-echo "deb https://apache.bintray.com/couchdb-deb xenial main" | sudo tee -a /etc/apt/sources.list
-sudo apt update
-sudo apt install couchdb -y
-# config screen: standalone; bind IP: 127.0.0.1; password: password
-```
-### 5. Configure WebDollar Miner to use CouchDB
-```shell
-git clone https://github.com/WebDollar/Node-WebDollar.git
-cd Node-WebDollar
-COUCHDB_URL="http:\/\/admin:password@127.0.0.1:5984\/blockchaindb"
-sed -i -e "s/blockchainDB3/${COUCHDB_URL}/g" "src/consts/const_global.js"
+git clone https://github.com/thelazyprogrammer/Node-WebDollar.git
+git checkout api_blocks
 npm install
 ```
-### 6. Start WebDollar Miner
+### 5. Start WebDollar Miner
 ```shell
 screen # press space
 npm run commands
@@ -39,17 +29,17 @@ npm run commands
 # screen -ls -> view screen_host
 # screen -r screen_host <- connect to the screen
 ```
-### 7. Clone WebDollar-Explorer-API
+### 6. Clone WebDollar-Explorer-API
 ```shell
 git clone https://github.com/thelazyprogrammer/webdollar-explorer-api.git
 ```
-### 8. Start REST API
+### 7. Start REST API
 ```shell
 cd webdollar-explorer-api/server
 npm install
 npm run start
 ```
-### 9. REST API ENDPOINTS
+### 8. REST API ENDPOINTS
 ```http
 # shows last 14 blocks
 GET: /block
@@ -60,7 +50,7 @@ GET: /block/<block-id>
 # shows miner information
 GET: /miner/<miner_address>
 ```
-### 10. Start Explorer Dashboard
+### 9. Start Explorer Dashboard
 ```shell
 cd client
 npm install
