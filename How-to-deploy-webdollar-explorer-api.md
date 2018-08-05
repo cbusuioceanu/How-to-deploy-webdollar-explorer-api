@@ -1,4 +1,4 @@
-# How-to-deploy-webdollar-explorer-api
+# How to deploy WebDollar explorer api
 Deploy a WebDollar Blockchain Explorer API
 
 ### 1. Install Ubuntu 16.04
